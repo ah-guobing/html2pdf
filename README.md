@@ -23,3 +23,6 @@ http://localhost:8080/html2pdf?htmlFile=/Users/guobingbing/Work/MyProject/tmpl2p
 * 所有标签必须是闭合的，如 &lt;br&gt; 应该写为 &lt;br /&gt;
 * HTML中要用CSS定义此页面使用的字体，如定义为：body{font-family:SimSun;}
 * HTML DTD声明要规范，不能省略不写，如定义为：&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+## 问题反馈
+使用中若有问题请联系微信号：tahaoku
