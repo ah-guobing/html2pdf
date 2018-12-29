@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<title>Insert title here</title>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<style>
+* {margin: 0;padding: 0;}
+body{
+	font-family:SimSun;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    overflow: auto;
+    margin: 0px;
+    padding: 0px;
+}
+i {font-style: normal;}
+ul, li {list-style: none;}
+.test_content_nr {width: 100%;border-top: 3px solid #efefef;padding: 0 10px}
+.test_content_nr>ul>li {width: 100%;border-bottom: 5px solid #efefef;padding-top: 10px;}
+.test_content_nr_tt {width: 85%;height: auto;line-height: 32px;margin: 0 auto;border-bottom: 1px solid #e4e4e4;}
+.test_content_nr_tt i {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    display: block;
+    float: left;
+    background: #5d9cec;
+    border-radius: 50%;
+    margin-left: -50px;
+    color: #fff;
+    margin-top: 8px;
+    font-size: 16px;
+}
+.test_content_nr_tt span {
+    padding: 0 8px;
+}
+.test_content_nr_tt font {
+    font-size: 14px;
+}
+.test_content_nr_main {
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px 0;
+    height: auto;
+}
+.option {
+    line-height: 32px;
+    display: block;
+    background: #fff;
+    color: #666;
+}
+.option input {
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: left;
+    margin: 7px 10px 0 0;
+}
+.option label {
+    height: auto;
+    display: block;
+}
+.test_content {
+    width: 100%;
+    height: auto;
+}
+.test_content_title {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: #f7f7f7;
+    text-align: center;
+}
+.test_content_title h2 {
+    padding: 0 16px;
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    float: left;
+}
+</style>
+</head>
+<body>
+	<div id="app">
+		<div class="test_content">
+			<div class="test_content_title">
+				<h2>一、财务状况</h2>
+			</div>
+		</div>
+		<div class="test_content_nr">
+		<ul>
+			<li>
+				<div class="test_content_nr_tt">
+					<i>1</i><font>您的主要收入来源是</font>
+				</div>
+				<div class="test_content_nr_main">
+					<ul>
+						<li class="option">
+							<input type="radio" class="radioOrCheck" name="answer1" id="0_answer_1_option_1"/>
+							<label for="0_answer_1_option_1">A.<p class="ue" style="display: inline;">工资、劳务报酬</p></label>
+						</li>
+						<li class="option">
+							<input type="radio" class="radioOrCheck" name="answer1" id="0_answer_1_option_1"/>
+							<label for="0_answer_1_option_1">B.<p class="ue" style="display: inline;">生产经营所得</p></label>
+						</li>
+						<li class="option">
+							<input type="radio" class="radioOrCheck" name="answer1" id="0_answer_1_option_1"/>
+							<label for="0_answer_1_option_1">C.<p class="ue" style="display: inline;">您的主要收入来源是</p></label>
+						</li>
+						<li class="option">
+							<input type="radio" class="radioOrCheck" name="answer1" id="0_answer_1_option_1"/>
+							<label for="0_answer_1_option_1">D.<p class="ue" style="display: inline;">您的主要收入来源是</p></label>
+						</li>
+						<li class="option">
+							<input type="radio" class="radioOrCheck" name="answer1" id="0_answer_1_option_1"/>
+							<label for="0_answer_1_option_1">D.<p class="ue" style="display: inline;">您的主要收入来源是</p></label>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<button id="aa"  >确认</button>
+	</div>
+	<script type="text/javascript">
+	var vm = new Vue({
+        el: '#app',
+        data:{
+        },
+        methods: {
+			submit:function(){
+				axios({
+   					url:window.location.href,
+   					method: 'post'
+   				}).then(respanse=>{
+   					var data = respanse.data.data;
+   				})
+			}
+        }
+    });
+	</script>
+</body>
+</html>
